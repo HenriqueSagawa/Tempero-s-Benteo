@@ -15,12 +15,6 @@ const userSchema = z.object({
 
 export type UserFormData = z.infer<typeof userSchema>;
 
-interface UseUserProps {
-    name: string | null,
-    email: string | null,
-    password: string | null
-}
-
 export function useUserForm() {
     return useForm<UserFormData>({
         resolver: zodResolver(userSchema),

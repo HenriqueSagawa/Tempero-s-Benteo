@@ -12,7 +12,7 @@ export function Footer() {
               <div className="w-8 h-8 bg-gradient-to-br from-green-600 to-red-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-sm">TB</span>
               </div>
-              <span className="text-xl font-bold">Tempero's Benteo</span>
+              <span className="text-xl font-bold">Tempero&apos;s Benteo</span>
             </div>
             <p className="text-gray-400">
               Temperos de alho artesanais que transformam suas receitas com sabor autêntico e qualidade premium.
@@ -107,7 +107,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Tempero's Benteo. Todos os direitos reservados.
+            © {new Date().getFullYear()} Tempero&apos;s Benteo. Todos os direitos reservados.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">

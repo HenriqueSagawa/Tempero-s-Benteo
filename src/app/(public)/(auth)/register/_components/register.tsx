@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Eye, EyeOff } from "lucide-react";
 import { FaGoogle } from "react-icons/fa";
 import Link from "next/link";
+import { handleRegister } from "@/app/(public)/_actions/login";
 
 
 export function RegisterContent() {
@@ -21,8 +22,8 @@ export function RegisterContent() {
         alert("Cadastro realizado com sucesso! (Verifique o console)");
     }
 
-    function handleGoogleLogin() {
-        console.log("Tentativa de login com o Google");
+    async function handleLogin() {
+        await handleRegister("google");
     }
 
     return (
@@ -128,7 +129,7 @@ export function RegisterContent() {
                         </div>
                     </div>
 
-                    <Button variant="outline" className="w-full" type="button" onClick={handleGoogleLogin}>
+                    <Button variant="outline" className="w-full" type="button" onClick={handleLogin}>
                         <FaGoogle className="mr-2 h-4 w-4" />
                         Entrar com Google
                     </Button>

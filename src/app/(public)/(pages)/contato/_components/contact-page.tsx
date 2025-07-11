@@ -176,7 +176,7 @@ export function ContactPage() {
                 <div className="space-y-3">
                   <div>
                     <h4 className="font-medium text-sm">Como faço para rastrear meu pedido?</h4>
-                    <p className="text-sm text-gray-600">Acesse "Meus Pedidos" na sua conta.</p>
+                    <p className="text-sm text-gray-600">Acesse &quot;Meus Pedidos&quot; na sua conta.</p>
                   </div>
                   <div>
                     <h4 className="font-medium text-sm">Qual o prazo de entrega?</h4>

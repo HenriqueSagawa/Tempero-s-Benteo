@@ -1,5 +1,3 @@
-// LoginContent.tsx
-
 'use client';
 
 import { useState } from "react";
@@ -11,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, EyeOff } from "lucide-react";
 import { FaGoogle } from "react-icons/fa";
+import { handleRegister } from "@/app/(public)/_actions/login";
 
 export function LoginContent() {
     const form = useLoginForm();
@@ -19,6 +18,10 @@ export function LoginContent() {
     async function onSubmit(values: LoginFormData) {
         console.log("Formulário de LOGIN enviado", values);
         alert("Login realizado com sucesso! (Verifique o console)");
+    }
+
+    async function handleLogin() {
+        await handleRegister("google");
     }
 
     return (
@@ -70,7 +73,7 @@ export function LoginContent() {
                                 )}
                             />
 
-                            <Button type="submit" className="w-full">
+                            <Button type="submit" className="w-full bg-green-600 text-white hover:bg-green-700">
                                 Entrar
                             </Button>
                         </form>
@@ -87,7 +90,7 @@ export function LoginContent() {
                         </div>
                     </div>
 
-                    <Button variant="outline" className="w-full" type="button">
+                    <Button onClick={handleLogin} variant="outline" className="w-full" type="button">
                         <FaGoogle className="mr-2 h-4 w-4" />
                         Entrar com Google
                     </Button>
@@ -96,7 +99,7 @@ export function LoginContent() {
                 <CardFooter>
                     <div className="w-full text-center text-sm text-muted-foreground">
                         Não tem uma conta?{' '}
-                        <Link href="/register" className="font-semibold text-primary hover:underline">
+                        <Link href="/register" className="font-semibold text-blue-500 hover:underline">
                             Cadastre-se
                         </Link>
                     </div>

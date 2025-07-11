@@ -54,7 +54,7 @@ export function AboutSection() {
                         Nossa História
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        A Tempero's Benteo nasceu da paixão pela culinária tradicional e do desejo de levar o sabor autêntico do
+                        A Tempero&apos;s Benteo nasceu da paixão pela culinária tradicional e do desejo de levar o sabor autêntico do
                         alho caseiro para sua mesa.
                     </p>
                 </div>
